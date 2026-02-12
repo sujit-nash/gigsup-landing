@@ -47,7 +47,7 @@ export default function NetworkEcosystem() {
     <section className="network-section" id="network">
       <div className="container">
         <div className="network-badge sr"><span>The #1 Career Intelligence Network</span></div>
-        <h2 className="section-heading sr">Join Canada&apos;s Student <span className="muted">Network Ecosystem</span></h2>
+        <h2 className="section-heading sr">Join Network <span className="muted">for Students</span></h2>
         <p className="network-sub sr">We built Canada&apos;s student network ecosystem. GigsUp connects you to mentors, schools &amp; employers within a growing career network. All aligned to your strengths &amp; next move.</p>
 
         <div className="network-showcase">
@@ -75,19 +75,11 @@ export default function NetworkEcosystem() {
           </div>
         </div>
 
-        <div className="network-keywords sr">
-          <span className="nk active">Mentors</span>
-          <span className="nk">Schools</span>
-          <span className="nk">Employers</span>
-          <span className="nk">Co-ops</span>
-          <span className="nk">Internships</span>
-          <span className="nk">Career Coaches</span>
-          <span className="nk">Industry Events</span>
-        </div>
 
         <div style={{ textAlign: 'center', marginTop: '48px' }} className="sr">
-          <a href="/quick-start" className="btn-primary">Join for Free <span className="arr">→</span></a>
+          <a href="/quick-start" className="btn-primary">JOIN FOR FREE <span className="arr">→</span></a>
         </div>
+
       </div>
     </section>
   )

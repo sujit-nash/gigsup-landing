@@ -7,14 +7,13 @@ export default function WhoItsFor() {
 
         <div className="who-grid">
           <div className="who-card sr" style={{ transitionDelay: '0s' }}>
-            <div className="who-icon">😊</div>
+            <div className="who-icon">🎓</div>
             <h3>High School</h3>
             <p className="who-tagline">Explore what&apos;s possible</p>
             <p>Discover careers through your transcript and interests. Get guidance on what subjects, extracurriculars, and schools will get you where you want to go.</p>
             <ul className="who-features">
-              <li>Journaling &amp; self-discovery</li>
-              <li>Transcript analysis</li>
-              <li>School requirements &amp; admissions plan</li>
+              <li>Journaling + Transcript analysis</li>
+              <li>School requirements + admissions plan</li>
               <li>Career exploration</li>
             </ul>
             <a href="/quick-start" className="who-cta">Find your path →</a>
@@ -33,15 +32,15 @@ export default function WhoItsFor() {
             <a href="/quick-start" className="who-cta">Find your 1st job →</a>
           </div>
           <div className="who-card sr" style={{ transitionDelay: '0.24s' }}>
-            <div className="who-icon">📷</div>
+            <div className="who-icon">💼</div>
             <h3>Mid-Career</h3>
             <p className="who-tagline">Own your next chapter</p>
             <p>Whether you&apos;re pivoting or advancing, track your growth, tell your story powerfully, and discover opportunities that match where you want to go.</p>
             <ul className="who-features">
-              <li>LinkedIn &amp; resume analysis</li>
-              <li>Career pivoting &amp; story building</li>
-              <li>Track career projects &amp; education</li>
-              <li>Build your skill toolbox</li>
+              <li>LinkedIn + resume analysis + Journaling analysis</li>
+              <li>Story building</li>
+              <li>Track career projects</li>
+              <li>Education to build skill</li>
             </ul>
             <a href="/quick-start" className="who-cta">Level up →</a>
           </div>

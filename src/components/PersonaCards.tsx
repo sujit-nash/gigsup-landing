@@ -27,31 +27,40 @@ export default function PersonaCards() {
     }, { threshold: 0.5 })
     counters.forEach(c => counterObs.observe(c))
 
+    // Expandable feature lists
+    document.querySelectorAll('.persona-expand-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.persona-card')
+        if (!card) return
+        const list = card.querySelector('.persona-features') as HTMLElement
+        const isOpen = card.classList.contains('features-open')
+        card.classList.toggle('features-open')
+        btn.textContent = isOpen ? '+' : '−'
+        if (list) {
+          list.style.maxHeight = isOpen ? '0' : list.scrollHeight + 'px'
+        }
+      })
+    })
+
     return () => counterObs.disconnect()
   }, [])
 
   return (
     <section className="personas" id="personas">
       <div className="container">
+        <p className="personas-intro sr">From high school to your first post-University job to your next career move, Gigsup helps you uncover your strengths, connect them to careers that fit, and take focused action with clarity and advantage — through a personalized job, mentor, and education plan.</p>
+        <div className="personas-cta-actions sr">
+          <a href="/quick-start" className="btn-primary">Free to Join the Community <span className="arr">→</span></a>
+        </div>
+        <p className="personas-cta-meta sr">Takes 2 minutes</p>
+
         <div className="personas-grid">
           {/* High School */}
           <div className="persona-card sr" style={{ transitionDelay: '0s' }}>
             <div className="persona-icon">🎓</div>
             <h3>I&apos;m in High School</h3>
             <p className="persona-tagline">Explore what&apos;s possible</p>
-            <p>Discover who you are and plan where you&apos;re going. Build an admission &amp; career plan aligned to your strengths.</p>
-            <ul className="persona-features">
-              <li>Journaling &amp; self-discovery</li>
-              <li>School requirements &amp; admissions plan</li>
-              <li>Career exploration</li>
-            </ul>
-            <div className="persona-pain">
-              <div className="persona-pain-title">Top Pain Points</div>
-              <ul>
-                <li><span className="num">01</span> Knowing career options/day-in-the-life</li>
-                <li><span className="num">02</span> High school → uni education plan</li>
-              </ul>
-            </div>
+            <p>Discover who you are and plan where you&apos;re going. Build a post-secondary admission &amp; career plan aligned to your strengths.</p>
             <a href="/quick-start" className="persona-cta">Get Your Top 5 Career Matches <span>→</span></a>
           </div>
 
@@ -60,21 +69,8 @@ export default function PersonaCards() {
             <div className="persona-icon">📚</div>
             <h3>I&apos;m in Uni / College</h3>
             <p className="persona-tagline">Land your first role</p>
-            <p>Discover your edge. Match your degree to opportunity. See career paths, major unlocks &amp; identify co-ops and internships.</p>
-            <ul className="persona-features">
-              <li>Resume &amp; transcript analysis</li>
-              <li>Job matching based on degree</li>
-              <li>Skill gap closing</li>
-              <li>Mentor connections</li>
-            </ul>
-            <div className="persona-pain">
-              <div className="persona-pain-title">Top Pain Points</div>
-              <ul>
-                <li><span className="num">01</span> Landing first job out of school</li>
-                <li><span className="num">02</span> Knowing what you can do with your degree</li>
-              </ul>
-            </div>
-            <a href="/quick-start" className="persona-cta">Find Your 1st Job <span>→</span></a>
+            <p>Discover your edge. Match your degree to opportunity. See the career paths your major unlocks &amp; identify co-ops and internships to help you standout.</p>
+            <a href="/quick-start" className="persona-cta">Get Your Top 5 Career Matches <span>→</span></a>
           </div>
 
           {/* Mid-Career */}
@@ -82,21 +78,8 @@ export default function PersonaCards() {
             <div className="persona-icon">🚀</div>
             <h3>I&apos;m Mid-Career</h3>
             <p className="persona-tagline">Own your next chapter</p>
-            <p>Rediscover your strengths. Re-match your path. Get a personalized education plan, mentor match &amp; strategic job postings.</p>
-            <ul className="persona-features">
-              <li>LinkedIn &amp; resume analysis</li>
-              <li>Career pivoting &amp; story building</li>
-              <li>Track career projects &amp; education</li>
-              <li>Build your skill toolbox</li>
-            </ul>
-            <div className="persona-pain">
-              <div className="persona-pain-title">Top Pain Points</div>
-              <ul>
-                <li><span className="num">01</span> Knowing what&apos;s next / career pivot</li>
-                <li><span className="num">02</span> Translating skills to new roles</li>
-              </ul>
-            </div>
-            <a href="/quick-start" className="persona-cta">Get Your Top 5 Career Moves <span>→</span></a>
+            <p>Rediscover your strengths. Re-match your path. Get a personalized education plan, mentor match &amp; strategic job postings just for you.</p>
+            <a href="/quick-start" className="persona-cta">Get Your Top 5 Career Matches <span>→</span></a>
           </div>
         </div>
 

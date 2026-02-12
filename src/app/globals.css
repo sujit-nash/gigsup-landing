@@ -247,6 +247,7 @@ img{display:block;max-width:100%}
 
 .hero-inner{
   position:relative;z-index:5;
+  text-align:center;
   will-change:transform,opacity;
   transform-origin:center center;
 }
@@ -272,7 +273,7 @@ img{display:block;max-width:100%}
   color:var(--white);max-width:860px;
   animation:fadeSlideUp 0.8s var(--ease-out) 0.35s both;
 }
-.hero h1 .line{display:block;will-change:transform}
+.hero h1 .line{display:block;white-space:nowrap;will-change:transform}
 .hero h1 .serif{
   font-family:'Crimson Pro',var(--font-crimson),serif;font-weight:600;font-style:italic;
   color:var(--hero-serif-color);
@@ -288,10 +289,18 @@ img{display:block;max-width:100%}
   animation:fadeSlideUp 0.8s var(--ease-out) 0.5s both;
 }
 
+.hero-arrow-down{
+  display:block;text-align:center;
+  font-size:28px;color:var(--green);
+  margin:28px auto 12px;
+  width:100%;
+  animation:fadeSlideUp 0.8s var(--ease-out) 0.5s both;
+}
 .hero-sub{
-  font-size:clamp(15px,1.4vw,19px);color:var(--text-muted);
+  font-size:clamp(11px,1vw,14px);color:var(--text-muted);
   max-width:620px;margin:0 auto 16px;
-  font-weight:400;line-height:1.7;
+  font-weight:600;line-height:1.7;
+  letter-spacing:0.18em;text-transform:uppercase;
   animation:fadeSlideUp 0.8s var(--ease-out) 0.55s both;
 }
 .hero-sub-small{
@@ -367,6 +376,23 @@ img{display:block;max-width:100%}
   background:var(--dark);
   transition:background 0.3s;
 }
+
+.personas-intro{
+  text-align:center;max-width:720px;margin:0 auto 24px;
+  font-size:clamp(15px,1.4vw,19px);color:var(--text-muted);
+  line-height:1.7;
+}
+.personas-intro strong{color:var(--white);font-weight:700}
+.personas-cta-actions{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.personas-cta-meta{
+  text-align:center;font-size:13px;color:var(--text-muted);
+  margin-bottom:56px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.personas-cta-meta .green-text{color:var(--green);font-weight:600}
 
 .personas-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
@@ -508,6 +534,7 @@ img{display:block;max-width:100%}
   font-size:22px;font-weight:700;color:var(--white);
   margin-bottom:12px;letter-spacing:-0.01em;
 }
+.how-highlight{font-size:15px;font-weight:500;font-style:italic;color:var(--green);margin:-4px 0 14px;line-height:1.5}
 .how-card p{font-size:14px;color:var(--text-muted);line-height:1.7}
 
 .how-arrow{
@@ -623,6 +650,20 @@ img{display:block;max-width:100%}
 }
 .nk:hover{border-color:var(--border-hover);color:var(--green);background:rgba(29,185,84,0.05)}
 .nk.active{border-color:var(--green);color:var(--green);background:rgba(29,185,84,0.08)}
+
+.network-cta-sub{
+  text-align:center;max-width:620px;margin:40px auto 16px;
+  font-size:clamp(15px,1.4vw,19px);color:var(--text-muted);
+  font-weight:400;line-height:1.7;
+}
+.network-cta-meta{
+  text-align:center;font-size:13px;color:var(--text-muted);margin-bottom:36px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.network-cta-meta .green-text{color:var(--green);font-weight:600}
+.network-cta-actions{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+}
 
 /* ════════════════════════════════════════════════
    WHO IT'S FOR
