@@ -274,13 +274,10 @@ img{display:block;max-width:100%}
   animation:fadeSlideUp 0.8s var(--ease-out) 0.35s both;
 }
 .hero h1 .line{display:block;white-space:nowrap;will-change:transform}
-.hero h1 .serif{
-  font-family:'Crimson Pro',var(--font-crimson),serif;font-weight:600;font-style:italic;
-  color:var(--hero-serif-color);
-}
+.hero h1 .serif,
 .hero h1 .grad{
-  background:linear-gradient(135deg,var(--green),var(--green-light));
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  font-weight:800;font-size:inherit;font-family:inherit;
+  color:var(--green);
 }
 
 .hero-diamond{
