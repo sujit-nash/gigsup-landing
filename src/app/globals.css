@@ -23,7 +23,8 @@
    THEME VARIABLES
    ════════════════════════════════════════════════ */
 
-/* Light theme */
+/* Light theme (default) */
+:root,
 [data-theme="light"] {
   --green: #1DB954;
   --green-light: #15803d;
@@ -64,11 +65,10 @@
   --hero-serif-color: #15803d;
   --toggle-save-color: #15803d;
   --logo-filter: brightness(0) saturate(100%) invert(48%) sepia(89%) saturate(401%) hue-rotate(108deg) brightness(95%) contrast(95%);
-  --hero-overlay: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.4) 100%);
+  --hero-overlay: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
 }
 
-/* Dark theme (default) */
-:root,
+/* Dark theme */
 [data-theme="dark"] {
   --green: #1DB954;
   --green-light: #34d399;
