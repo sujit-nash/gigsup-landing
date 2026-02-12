@@ -70,9 +70,6 @@ export default function NetworkEcosystem() {
           <div className="float-img fi-5" data-rotate="1.5">
             <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=400&h=300&fit=crop" alt="Team working together" loading="lazy" />
           </div>
-          <div className="float-img fi-6" data-rotate="-1.5">
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=400&fit=crop" alt="Professional growth" loading="lazy" />
-          </div>
         </div>
 
 
