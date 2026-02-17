@@ -52,8 +52,6 @@ export default function Hero() {
           <span className="line" id="heroLine2"><span className="grad">Match</span> to Careers that Fit</span>
           <span className="line" id="heroLine3"><span className="serif">Achieve</span> <span>Your</span> <span>Career</span> <span>Advantage</span></span>
         </h1>
-        <div className="hero-arrow-down">↑</div>
-        <p className="hero-sub">UNLOCK YOUR POTENTIAL IN A CHANGING WORLD OF WORK</p>
       </div>
     </section>
   )

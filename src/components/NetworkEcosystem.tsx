@@ -47,8 +47,11 @@ export default function NetworkEcosystem() {
     <section className="network-section" id="network">
       <div className="container">
         <div className="network-badge sr"><span>The #1 Career Intelligence Network</span></div>
-        <h2 className="section-heading sr">Join Network <span className="muted">for Students</span></h2>
-        <p className="network-sub sr">We built Canada&apos;s student network ecosystem. GigsUp connects you to mentors, schools &amp; employers within a growing career network. All aligned to your strengths &amp; next move.</p>
+        <h2 className="section-heading sr">Unlock Your Potential in a Changing World of Work</h2>
+        <p className="network-sub sr">From high school to your first post-University job to your next career move, Gigsup helps you uncover your strengths, connect them to careers that fit, and take focused action with clarity and advantage — through a personalized job, mentor, and education plan.</p>
+        <div style={{ textAlign: 'center', marginTop: '24px', marginBottom: '48px' }} className="sr">
+          <a href="/quick-start" className="btn-primary">JOIN FOR FREE <span className="arr">→</span></a>
+        </div>
 
         <div className="network-showcase">
           {/* Ghost placeholder — the fixed video shrinks to fit here */}
@@ -70,11 +73,6 @@ export default function NetworkEcosystem() {
           <div className="float-img fi-5" data-rotate="1.5">
             <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=400&h=300&fit=crop" alt="Team working together" loading="lazy" />
           </div>
-        </div>
-
-
-        <div style={{ textAlign: 'center', marginTop: '48px' }} className="sr">
-          <a href="/quick-start" className="btn-primary">JOIN FOR FREE <span className="arr">→</span></a>
         </div>
 
       </div>

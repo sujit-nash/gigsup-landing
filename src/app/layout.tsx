@@ -22,9 +22,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GigsUp — Discover You. Match to Careers. Achieve Your Advantage.",
+  title: "Gigsup — Discover You. Match to Careers. Achieve Your Advantage.",
   description:
-    "Unlock your potential in a changing world of work. GigsUp helps you uncover your strengths, connect to careers that fit, and take action with clarity.",
+    "Unlock your potential in a changing world of work. Gigsup helps you uncover your strengths, connect to careers that fit, and take action with clarity.",
 };
 
 export default function RootLayout({

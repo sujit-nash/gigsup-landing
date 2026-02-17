@@ -3,7 +3,7 @@ export default function HowItWorks() {
     <section className="how-section" id="howItWorks">
       <div className="container">
         <div className="section-eyebrow sr">How It Works</div>
-        <h2 className="section-heading sr">Three steps to <span className="muted">career clarity</span></h2>
+        <h2 className="section-heading sr">Three steps to career clarity</h2>
 
         <div className="how-grid">
           <div className="how-card sr" style={{ transitionDelay: '0s' }}>

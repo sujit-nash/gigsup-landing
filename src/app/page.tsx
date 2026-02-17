@@ -4,6 +4,7 @@ import VideoTransition from '@/components/VideoTransition'
 import PersonaCards from '@/components/PersonaCards'
 import HowItWorks from '@/components/HowItWorks'
 import NetworkEcosystem from '@/components/NetworkEcosystem'
+import JoinNetwork from '@/components/JoinNetwork'
 import WhoItsFor from '@/components/WhoItsFor'
 import Pricing from '@/components/Pricing'
 import CTA from '@/components/CTA'
@@ -20,6 +21,7 @@ export default function Home() {
       <NetworkEcosystem />
       <PersonaCards />
       <HowItWorks />
+      <JoinNetwork />
       <WhoItsFor />
       <Pricing />
       <CTA />

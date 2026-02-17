@@ -65,7 +65,7 @@ export default function Pricing() {
             <div className="pricing-name">The Squeeze</div>
             <div className="pricing-goal">Goal: Turn insight into direction</div>
             <div className="pricing-price">
-              <span className="amount" data-monthly="5" data-annual="4">$5</span>
+              <span className="amount" data-monthly="5.99" data-annual="4.99">$5.99</span>
               <span className="period" data-monthly="/month" data-annual="/month">/month</span>
             </div>
             <div className="pricing-note">Free for 30 days, then billed <span className="billing-cycle">monthly</span></div>
@@ -86,7 +86,7 @@ export default function Pricing() {
             <div className="pricing-name">The Juice</div>
             <div className="pricing-goal">Goal: Execute with advantage</div>
             <div className="pricing-price">
-              <span className="amount" data-monthly="10" data-annual="8">$10</span>
+              <span className="amount" data-monthly="10.99" data-annual="8.99">$10.99</span>
               <span className="period" data-monthly="/month" data-annual="/month">/month</span>
             </div>
             <div className="pricing-note">Billed <span className="billing-cycle">monthly</span></div>

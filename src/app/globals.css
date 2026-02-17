@@ -462,6 +462,15 @@ img{display:block;max-width:100%}
 }
 .persona-cta:hover{gap:10px}
 
+.persona-callout{
+  display:flex;align-items:center;gap:8px;
+  margin-top:20px;padding:14px 18px;border-radius:12px;
+  background:rgba(207,255,129,0.1);border:1px solid rgba(207,255,129,0.25);
+  font-size:14px;font-weight:700;color:var(--green);
+  transition:all 0.25s;
+}
+.persona-callout:hover{background:rgba(207,255,129,0.18);gap:12px}
+
 .stats-row{
   display:flex;justify-content:center;gap:56px;
   padding:56px 0;
@@ -491,6 +500,7 @@ img{display:block;max-width:100%}
   background:var(--dark-2);
   position:relative;
   transition:background 0.3s;
+  text-align:center;
 }
 .how-section::before{
   content:'';position:absolute;top:0;left:0;right:0;height:1px;
@@ -516,6 +526,7 @@ img{display:block;max-width:100%}
   border:1px solid var(--border);
   position:relative;
   transition:background 0.4s;
+  text-align:left;
 }
 .how-card:first-child{border-radius:20px 0 0 20px}
 .how-card:last-child{border-radius:0 20px 20px 0}

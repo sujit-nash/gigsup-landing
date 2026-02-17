@@ -21,7 +21,7 @@ export default function Navigation() {
     <div className="nav-wrap" id="navWrap">
       <nav className="nav">
         <a href="/" className="nav-logo">
-          <img src="/gigsup-logo.png" alt="GigsUp" style={{ height: '32px', width: 'auto' }} />
+          <img src="/gigsup-logo.png" alt="Gigsup" style={{ height: '32px', width: 'auto' }} />
         </a>
         <ul className="nav-center">
           <li className="nav-item">
