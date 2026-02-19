@@ -12,7 +12,6 @@ const personas = [
     description: 'Discover who you are and plan where you\'re going. Build a post-secondary admission & career plan aligned to your strengths.',
     cta: 'Get Your Post-Secondary Admission Plan',
     href: '/quick-start',
-    features: ['Journaling + transcript analysis', 'School requirements + admissions plan', 'Career exploration'],
   },
   {
     id: 'university',
@@ -20,10 +19,9 @@ const personas = [
     tab: 'University',
     title: "I'm in Uni / College",
     tagline: 'Land your first role',
-    description: 'Discover your edge. Match your degree to opportunity. See the career paths your major unlocks & identify co-ops and internships to help you standout.',
+    description: 'Discover your edge. Match your degree to opportunity. See the career paths your major unlocks & identify co-ops / internships to help you standout.',
     cta: 'Discover the Top 5 Career Matches for Your Degree',
     href: '/quick-start',
-    features: ['Resume & transcript analysis', 'Job matching based on degree', 'Skill gap closing', 'Mentor connections'],
   },
   {
     id: 'midcareer',
@@ -34,7 +32,6 @@ const personas = [
     description: 'Rediscover your strengths. Re-match your path. Get a personalized education plan, mentor match & strategic job postings just for you.',
     cta: 'Get Your Personalized Career Plan',
     href: '/quick-start',
-    features: ['LinkedIn + resume analysis', 'Story building', 'Track career projects', 'Education to build skill'],
   },
 ]
 
@@ -149,11 +146,6 @@ export default function PersonaCards() {
             <div className="persona-showcase-badge">{p.tagline}</div>
             <h3 className="persona-showcase-title">{p.title}</h3>
             <p className="persona-showcase-desc">{p.description}</p>
-            <ul className="persona-showcase-features">
-              {p.features.map((f, i) => (
-                <li key={i}>{f}</li>
-              ))}
-            </ul>
             <a href={p.href} className="persona-showcase-cta">
               {p.cta} <span>→</span>
             </a>

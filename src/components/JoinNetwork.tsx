@@ -65,7 +65,9 @@ export default function JoinNetwork() {
     <section className="network-join-section">
       <div className="container" style={{ textAlign: 'center', padding: '80px 24px' }}>
         <h2 className="section-heading sr">Join Network for Students</h2>
-        <p className="network-sub sr">We built Canada&apos;s student network ecosystem. Gigsup connects you to mentors, schools &amp; employers within a growing career network. All aligned to your strengths &amp; next move.</p>
+        <p className="network-sub sr">We built Canada&apos;s student network ecosystem. Gigsup connects you to mentors, schools &amp; employers within a growing career network ecosystem. All aligned to your strengths &amp; next move.</p>
+
+        <a href="/quick-start" className="join-network-btn sr">Join the Network →</a>
 
         <div className={`join-faces ${triggered ? 'visible' : ''}`} ref={facesRef}>
           {faces.map((src, i) => (

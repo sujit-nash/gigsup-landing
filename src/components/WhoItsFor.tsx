@@ -15,8 +15,8 @@ export default function WhoItsFor() {
             <p>Discover careers through your transcript and interests. Get guidance on what subjects, extracurriculars, and schools will get you where you want to go.</p>
             <ul className="who-features">
               <li>Journaling + Transcript analysis</li>
-              <li>School requirements + admissions plan</li>
               <li>Career exploration</li>
+              <li>School requirements + Admissions plan</li>
             </ul>
             <a href="/quick-start" className="who-cta">Find your path →</a>
           </div>
@@ -26,7 +26,7 @@ export default function WhoItsFor() {
             <p className="who-tagline">Land your first role</p>
             <p>See what careers your degree unlocks. Match with real job postings, identify skill gaps, and connect with mentors who&apos;ve been there.</p>
             <ul className="who-features">
-              <li>Resume &amp; transcript analysis</li>
+              <li>Resume + Transcript analysis</li>
               <li>Job matching based on degree</li>
               <li>Skill gap closing</li>
               <li>Mentor connections</li>
@@ -39,10 +39,10 @@ export default function WhoItsFor() {
             <p className="who-tagline">Own your next chapter</p>
             <p>Whether you&apos;re pivoting or advancing, track your growth, tell your story powerfully, and discover opportunities that match where you want to go.</p>
             <ul className="who-features">
-              <li>LinkedIn + resume analysis + Journaling analysis</li>
-              <li>Story building</li>
+              <li>LinkedIn + Resume + Journaling analysis</li>
               <li>Track career projects</li>
               <li>Education to build skill</li>
+              <li>Story building</li>
             </ul>
             <a href="/quick-start" className="who-cta">Level up →</a>
           </div>

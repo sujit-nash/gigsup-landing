@@ -110,7 +110,6 @@ export default function Home() {
         direction="right"
         speed="normal"
       />
-      <CTA />
       <Footer />
     </>
   )

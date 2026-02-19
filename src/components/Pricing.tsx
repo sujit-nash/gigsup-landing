@@ -76,7 +76,7 @@ export default function Pricing() {
               <li><span className="check">✓</span> Full strengths profile</li>
               <li><span className="check">✓</span> Full VISI assessment access</li>
               <li><span className="check">✓</span> All career matches</li>
-              <li><span className="check">✓</span> Full education pathways / post-secondary plan</li>
+              <li><span className="check">✓</span> Full education pathways / post-secondary admission plan</li>
               <li><span className="check">✓</span> Full mentor matching</li>
               <li><span className="check">✓</span> Full personalized job matching</li>
             </ul>
