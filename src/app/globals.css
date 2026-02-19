@@ -44,8 +44,8 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* Theme-specific tokens */
-  --nav-bg: rgba(255,255,255,0.85);
-  --nav-bg-scrolled: rgba(255,255,255,0.95);
+  --nav-bg: rgba(0,0,0,0.95);
+  --nav-bg-scrolled: rgba(0,0,0,1);
   --hover-bg: rgba(0,0,0,0.04);
   --dropdown-shadow: 0 16px 48px rgba(0,0,0,0.1);
   --dropdown-bg: #ffffff;
@@ -61,51 +61,11 @@
   --orb-1-bg: rgba(207,255,129,0.06);
   --orb-2-bg: rgba(59,130,246,0.04);
   --orb-3-bg: rgba(207,255,129,0.03);
-  --btn-primary-text: #ffffff;
+  --btn-primary-text: #000000;
   --hero-serif-color: #CFFF81;
   --toggle-save-color: #CFFF81;
   --logo-filter: none;
   --hero-overlay: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
-}
-
-/* Dark theme */
-[data-theme="dark"] {
-  --green: #CFFF81;
-  --green-light: #e0ffb3;
-  --green-glow: rgba(207,255,129,0.15);
-  --dark: #06080d;
-  --dark-2: #0c1017;
-  --dark-3: #111621;
-  --dark-card: #141a28;
-  --border: rgba(255,255,255,0.06);
-  --border-hover: rgba(207,255,129,0.25);
-  --text: #cdd5e0;
-  --text-muted: #6b7a90;
-  --text-bright: #f0f4f8;
-  --white: #ffffff;
-
-  --nav-bg: rgba(6,8,13,0.8);
-  --nav-bg-scrolled: rgba(6,8,13,0.95);
-  --hover-bg: rgba(255,255,255,0.04);
-  --dropdown-shadow: 0 16px 48px rgba(0,0,0,0.5);
-  --dropdown-bg: var(--dark-3);
-  --card-shadow-hover: 0 8px 40px rgba(0,0,0,0.4);
-  --ghost-border: rgba(255,255,255,0.1);
-  --ghost-border-hover: rgba(255,255,255,0.25);
-  --grid-line: rgba(255,255,255,0.02);
-  --scroll-line: rgba(255,255,255,0.15);
-  --subtle-bg: rgba(255,255,255,0.02);
-  --subtle-border: rgba(255,255,255,0.04);
-  --nk-bg: rgba(255,255,255,0.03);
-  --outline-hover-border: rgba(255,255,255,0.2);
-  --orb-1-bg: rgba(207,255,129,0.1);
-  --orb-2-bg: rgba(59,130,246,0.08);
-  --orb-3-bg: rgba(207,255,129,0.06);
-  --btn-primary-text: #06080d;
-  --hero-serif-color: #CFFF81;
-  --toggle-save-color: #CFFF81;
-  --logo-filter: none;
-  --hero-overlay: linear-gradient(to bottom, rgba(6,8,13,0.6) 0%, rgba(6,8,13,0.35) 100%);
 }
 
 /* ════════════════════════════════════════════════
@@ -196,7 +156,7 @@ img{display:block;max-width:100%}
 .btn-login:hover{color:var(--white)}
 .btn-join{
   padding:10px 24px;font-size:13px;font-weight:600;
-  background:var(--green);color:var(--btn-primary-text);border-radius:10px;
+  background:var(--green);color:#000000;border-radius:10px;
   transition:transform 0.2s,box-shadow 0.2s;
 }
 .btn-join:hover{transform:translateY(-1px);box-shadow:0 4px 20px var(--green-glow)}
@@ -276,7 +236,7 @@ img{display:block;max-width:100%}
 }
 .hero h1 .line{display:block;white-space:nowrap;will-change:transform}
 .hero h1 .line:last-child{
-  display:flex;justify-content:space-between;letter-spacing:-0.035em;
+  display:flex;justify-content:space-evenly;letter-spacing:-0.035em;
   width:100%;
 }
 .hero h1 .serif,
@@ -570,6 +530,88 @@ img{display:block;max-width:100%}
   .how-grid{grid-template-columns:1fr;gap:16px}
   .how-card{border-radius:16px !important}
   .how-arrow{display:none}
+}
+
+/* ════════════════════════════════════════════════
+   LOGO CAROUSEL
+   ════════════════════════════════════════════════ */
+.carousel-section{
+  padding:100px 0 80px;
+  background:var(--dark);
+  position:relative;
+  text-align:center;
+  overflow:hidden;
+}
+
+.carousel-eyebrow{
+  font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--green);margin-bottom:12px;
+}
+
+.carousel-heading{
+  font-size:clamp(28px,3.5vw,48px);font-weight:800;
+  color:var(--white);margin-bottom:56px;letter-spacing:-0.02em;
+}
+
+.carousel-rows{
+  display:flex;flex-direction:column;gap:16px;
+}
+
+.carousel-track-wrapper{
+  overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+  padding:6px 0;
+}
+
+.carousel-track{
+  display:flex;gap:16px;width:max-content;will-change:transform;
+}
+
+.carousel-track--left{animation:carouselScrollLeft 35s linear infinite}
+.carousel-track--right{animation:carouselScrollRight 35s linear infinite}
+
+.carousel-track--slow{animation-duration:50s}
+.carousel-track--normal{animation-duration:35s}
+.carousel-track--fast{animation-duration:20s}
+
+.carousel-track-wrapper:hover .carousel-track{animation-play-state:paused}
+
+@keyframes carouselScrollLeft{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+@keyframes carouselScrollRight{
+  0%{transform:translateX(-50%)}
+  100%{transform:translateX(0)}
+}
+
+.carousel-logo-pill{
+  flex-shrink:0;padding:14px 32px;border-radius:12px;
+  background:var(--dark-2);border:1px solid var(--border);
+  font-size:15px;font-weight:600;color:var(--text);
+  white-space:nowrap;transition:border-color 0.3s,color 0.3s,background 0.3s;
+  display:flex;align-items:center;gap:10px;
+}
+
+.carousel-pill-logo{
+  width:28px;height:28px;object-fit:contain;flex-shrink:0;border-radius:4px;
+}
+
+.carousel-pill-initials{
+  width:28px;height:28px;border-radius:6px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:800;color:#fff;letter-spacing:0.02em;
+}
+
+.carousel-logo-pill:hover{
+  border-color:var(--border-hover);color:var(--green);background:var(--dark-3);
+}
+
+@media(max-width:768px){
+  .carousel-section{padding:60px 0 48px}
+  .carousel-heading{margin-bottom:36px}
+  .carousel-logo-pill{padding:10px 20px;font-size:13px;border-radius:10px}
 }
 
 /* ════════════════════════════════════════════════

@@ -34,6 +34,7 @@ export default function Hero() {
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     onScroll()
+
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 

@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   useEffect(() => {
@@ -45,7 +44,6 @@ export default function Navigation() {
           </li>
         </ul>
         <div className="nav-right">
-          <ThemeToggle />
           <a href="/login" className="btn-login">Login</a>
           <a href="/quick-start" className="btn-join">Join for Free</a>
         </div>
