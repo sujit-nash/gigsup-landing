@@ -11,32 +11,33 @@ import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import ScrollReveal from '@/components/ScrollReveal'
 import LogoCarousel from '@/components/LogoCarousel'
+import PartnerWall from '@/components/PartnerWall'
 
 const universityLogos = [
   // Row 1 — Major universities
-  { name: 'University of Toronto', color: '#002A5C', initials: 'UofT' },
-  { name: 'UBC', color: '#002145', initials: 'UBC' },
-  { name: 'McGill University', color: '#ED1B2F', initials: 'McG' },
-  { name: 'University of Alberta', color: '#007C41', initials: 'UofA' },
-  { name: 'University of Waterloo', color: '#FFD54F', initials: 'UW' },
-  { name: "Queen's University", color: '#B90E31', initials: 'QU' },
-  { name: 'Western University', color: '#4F2683', initials: 'WU' },
+  { name: 'University of Toronto', color: '#002A5C', initials: 'UofT', logo: '/logos/universities/uoft.png' },
+  { name: 'UBC', color: '#002145', initials: 'UBC', logo: '/logos/universities/ubc.png' },
+  { name: 'McGill University', color: '#ED1B2F', initials: 'McG', logo: '/logos/universities/mcgill.png' },
+  { name: 'University of Alberta', color: '#007C41', initials: 'UofA', logo: '/logos/universities/uofa.png' },
+  { name: 'University of Waterloo', color: '#FFD54F', initials: 'UW', logo: '/logos/universities/waterloo.png' },
+  { name: "Queen's University", color: '#B90E31', initials: 'QU', logo: '/logos/universities/queens.png' },
+  { name: 'Western University', color: '#4F2683', initials: 'WU', logo: '/logos/universities/western.png' },
   // Row 2 — More universities
-  { name: 'Simon Fraser University', color: '#CC0633', initials: 'SFU' },
-  { name: 'University of Calgary', color: '#CF0722', initials: 'UCal' },
-  { name: 'York University', color: '#E31837', initials: 'YU' },
-  { name: 'University of Ottawa', color: '#8F001A', initials: 'UOtt' },
-  { name: 'Dalhousie University', color: '#FFD100', initials: 'Dal' },
-  { name: 'University of Victoria', color: '#005493', initials: 'UVic' },
-  { name: 'Toronto Metropolitan University', color: '#004C9B', initials: 'TMU' },
+  { name: 'Simon Fraser University', color: '#CC0633', initials: 'SFU', logo: '/logos/universities/sfu.png' },
+  { name: 'University of Calgary', color: '#CF0722', initials: 'UCal', logo: '/logos/universities/ucalgary.png' },
+  { name: 'York University', color: '#E31837', initials: 'YU', logo: '/logos/universities/york.png' },
+  { name: 'University of Ottawa', color: '#8F001A', initials: 'UOtt', logo: '/logos/universities/uottawa.png' },
+  { name: 'Dalhousie University', color: '#FFD100', initials: 'Dal', logo: '/logos/universities/dal.png' },
+  { name: 'University of Victoria', color: '#005493', initials: 'UVic', logo: '/logos/universities/uvic.png' },
+  { name: 'Toronto Metropolitan University', color: '#004C9B', initials: 'TMU', logo: '/logos/universities/tmu.png' },
   // Row 3 — BC colleges
-  { name: 'Alexander College', color: '#1B3A6B', initials: 'AC' },
-  { name: 'BCIT', color: '#003C71', initials: 'BCIT' },
-  { name: 'UCW', color: '#1E3A5F', initials: 'UCW' },
-  { name: 'Langara College', color: '#E4002B', initials: 'LC' },
-  { name: 'Douglas College', color: '#003DA5', initials: 'DC' },
-  { name: 'Capilano University', color: '#00529B', initials: 'CapU' },
-  { name: 'Kwantlen Polytechnic', color: '#00704A', initials: 'KPU' },
+  { name: 'Alexander College', color: '#1B3A6B', initials: 'AC', logo: '/logos/universities/alexander.png' },
+  { name: 'BCIT', color: '#003C71', initials: 'BCIT', logo: '/logos/universities/bcit.png' },
+  { name: 'UCW', color: '#1E3A5F', initials: 'UCW', logo: '/logos/universities/ucw.png' },
+  { name: 'Langara College', color: '#E4002B', initials: 'LC', logo: '/logos/universities/langara.png' },
+  { name: 'Douglas College', color: '#003DA5', initials: 'DC', logo: '/logos/universities/douglas.png' },
+  { name: 'Capilano University', color: '#00529B', initials: 'CapU', logo: '/logos/universities/capu.png' },
+  { name: 'Kwantlen Polytechnic', color: '#00704A', initials: 'KPU', logo: '/logos/universities/kpu.png' },
 ]
 
 const employerLogos = [
@@ -46,33 +47,22 @@ const employerLogos = [
   { name: 'Desjardins', logo: '/logos/employers/desjardins.png' },
   { name: 'Air Canada', logo: '/logos/employers/aircanada.png' },
   { name: 'Shopify', logo: '/logos/employers/shopify.png' },
-  { name: 'SAP Canada', logo: '/logos/employers/sap.png' },
   { name: 'OpenText', logo: '/logos/employers/opentext.png' },
   { name: 'Loblaw', logo: '/logos/employers/loblaw.png' },
   { name: 'Maple Leaf Foods', logo: '/logos/employers/mapleleaf.png' },
-  { name: 'Nestlé Canada', logo: '/logos/employers/nestle.png' },
-  { name: 'Procter & Gamble', logo: '/logos/employers/pg.png' },
-  { name: 'Rio Tinto', logo: '/logos/employers/riotinto.png' },
   { name: 'BC Hydro', logo: '/logos/employers/bchydro.png' },
-  { name: 'EY', logo: '/logos/employers/ey.png' },
-  { name: 'BDO Canada', logo: '/logos/employers/bdo.png' },
-  { name: 'Boston Consulting Group', logo: '/logos/employers/bcg.png' },
+  { name: 'Telus', logo: '/logos/employers/telus.png' },
   { name: 'TD Bank', logo: '/logos/employers/td.png' },
   { name: 'BMO', logo: '/logos/employers/bmo.png' },
-  { name: 'Bell Canada', logo: '/logos/employers/bell.png' },
+  { name: 'Rogers', logo: '/logos/employers/rogers.png' },
+  { name: 'Manulife', logo: '/logos/employers/manulife.png' },
+  { name: 'Sun Life', logo: '/logos/employers/sunlife.png' },
+  { name: 'Lululemon', logo: '/logos/employers/lululemon.png' },
+  { name: 'BlackBerry', logo: '/logos/employers/blackberry.png' },
+  { name: 'Canadian Tire', logo: '/logos/employers/canadiantirecorp.png' },
+  { name: 'Enbridge', logo: '/logos/employers/enbridge.png' },
 ]
 
-const partnerLogos = [
-  'Accelerate Okanagan',
-  'Spring',
-  'M51 Accelerator',
-  'NVIDIA Inception',
-  'Virtual Trade Accelerator',
-  'NRC IRAP',
-  'Mitacs',
-  'BCIT',
-  'UCW',
-]
 
 export default function Home() {
   return (
@@ -86,7 +76,8 @@ export default function Home() {
       <HowItWorks />
       <LogoCarousel
         id="universities"
-        heading="Connecting Students Across Canada"
+        eyebrow="Across Campuses"
+        heading="Empowering students across Canada"
         logos={universityLogos}
         direction="left"
         speed="normal"
@@ -95,21 +86,15 @@ export default function Home() {
       <JoinNetwork />
       <LogoCarousel
         id="employers"
-        heading="Canada's top employers use Gigsup to find their next generation of talent"
+        eyebrow="Employer Network"
+        heading="Leading employers across Canada"
         logos={employerLogos}
         direction="right"
         speed="normal"
       />
       <WhoItsFor />
       <Pricing />
-      <LogoCarousel
-        id="supporters"
-        eyebrow="Our Partners"
-        heading="Supported By"
-        logos={partnerLogos}
-        direction="right"
-        speed="normal"
-      />
+      <PartnerWall />
       <Footer />
     </>
   )
