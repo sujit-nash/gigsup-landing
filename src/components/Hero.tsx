@@ -15,38 +15,17 @@ export default function Hero() {
         const spans = line3.querySelectorAll('span')
         const advantageSpan = spans[spans.length - 1]
         if (!achieveSpan || !advantageSpan) return
-        // Equalize: shift last line so left dist = right dist
-        const aLeft = achieveSpan.getBoundingClientRect().left
-        const aRight = window.innerWidth - advantageSpan.getBoundingClientRect().right
-        const diff = Math.round((aLeft - aRight) / 2)
-        const line3El = line3 as HTMLElement
-        line3El.style.paddingRight = `${diff}px`
-        line3El.style.paddingLeft = '0'
-        if (diff < 0) {
-          line3El.style.paddingLeft = `${-diff}px`
-          line3El.style.paddingRight = '0'
-        }
 
         // Align lines 1 & 2 to Achieve
-        const newAchieveLeft = achieveSpan.getBoundingClientRect().left
+        const achieveLeft = achieveSpan.getBoundingClientRect().left
         const h1Left = h1El.getBoundingClientRect().left
-        const offset = newAchieveLeft - h1Left
-        if (line1) line1.style.paddingLeft = `${offset}px`
-        if (line2) line2.style.paddingLeft = `${offset}px`
-
-        // TEMP: ruler
-        const leftDist = Math.round(achieveSpan.getBoundingClientRect().left)
-        const rightDist = Math.round(window.innerWidth - advantageSpan.getBoundingClientRect().right)
-        let ruler = document.getElementById('spacingRuler')
-        if (!ruler) {
-          ruler = document.createElement('div')
-          ruler.id = 'spacingRuler'
-          ruler.style.cssText = 'position:fixed;top:0;left:0;width:100%;z-index:99999;pointer-events:none;display:flex;justify-content:space-between;padding:8px 16px;font:bold 16px monospace;'
-          document.body.appendChild(ruler)
-        }
-        ruler.innerHTML = `<span style="color:red;background:rgba(255,255,255,0.9);padding:4px 8px;border-radius:4px;">← ${leftDist}px to Achieve</span><span style="color:red;background:rgba(255,255,255,0.9);padding:4px 8px;border-radius:4px;">Advantage to → ${rightDist}px</span>`
+        const offset = achieveLeft - h1Left
+        if (line1) { line1.style.paddingLeft = '0'; line1.style.marginLeft = `${offset}px` }
+        if (line2) { line2.style.paddingLeft = '0'; line2.style.marginLeft = `${offset}px` }
       }
-      align()
+      // Run after animations settle
+      setTimeout(() => { requestAnimationFrame(align) }, 400)
+      setTimeout(() => { requestAnimationFrame(align) }, 1200)
       window.addEventListener('resize', align)
     }
 

@@ -180,7 +180,7 @@ img{display:block;max-width:100%}
   position:relative;z-index:2;
   min-height:100vh;padding-top:var(--nav-h);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;overflow:hidden;
+  text-align:center;
   background:transparent;
 }
 
@@ -238,7 +238,6 @@ img{display:block;max-width:100%}
 .hero h1 .line:last-child{
   display:flex;justify-content:center;gap:0.3em;letter-spacing:-0.035em;
   width:100%;
-  padding-right:0;
 }
 .hero h1 .serif,
 .hero h1 .grad{
@@ -664,14 +663,10 @@ img{display:block;max-width:100%}
 }
 
 #universities .carousel-heading{
-  font-size:clamp(22px,2.5vw,34px);
-  white-space:nowrap;
   max-width:none;
 }
 
 #employers .carousel-heading{
-  font-size:clamp(22px,2.5vw,34px);
-  white-space:nowrap;
   max-width:none;
 }
 
