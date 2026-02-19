@@ -2,8 +2,10 @@ export default function WhoItsFor() {
   return (
     <section className="who-section" id="whoItsFor">
       <div className="container">
-        <div className="section-eyebrow sr" style={{ textAlign: 'center' }}>Who It&apos;s For</div>
-        <h2 className="section-heading sr">Built for every stage of <span className="muted">your journey</span></h2>
+        <div style={{ textAlign: 'center' }}>
+          <div className="section-eyebrow sr">Who It&apos;s For</div>
+          <h2 className="section-heading sr">Built for every stage of <span style={{ color: '#000000' }}>your journey</span></h2>
+        </div>
 
         <div className="who-grid">
           <div className="who-card sr" style={{ transitionDelay: '0s' }}>

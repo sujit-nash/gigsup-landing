@@ -40,6 +40,29 @@ const universityLogos = [
 ]
 
 const employerLogos = [
+  { name: 'RBC', logo: '/logos/employers/rbc.png' },
+  { name: 'CIBC', logo: '/logos/employers/cibc.png' },
+  { name: 'Scotiabank', logo: '/logos/employers/scotiabank.png' },
+  { name: 'Desjardins', logo: '/logos/employers/desjardins.png' },
+  { name: 'Air Canada', logo: '/logos/employers/aircanada.png' },
+  { name: 'Shopify', logo: '/logos/employers/shopify.png' },
+  { name: 'SAP Canada', logo: '/logos/employers/sap.png' },
+  { name: 'OpenText', logo: '/logos/employers/opentext.png' },
+  { name: 'Loblaw', logo: '/logos/employers/loblaw.png' },
+  { name: 'Maple Leaf Foods', logo: '/logos/employers/mapleleaf.png' },
+  { name: 'Nestlé Canada', logo: '/logos/employers/nestle.png' },
+  { name: 'Procter & Gamble', logo: '/logos/employers/pg.png' },
+  { name: 'Rio Tinto', logo: '/logos/employers/riotinto.png' },
+  { name: 'BC Hydro', logo: '/logos/employers/bchydro.png' },
+  { name: 'EY', logo: '/logos/employers/ey.png' },
+  { name: 'BDO Canada', logo: '/logos/employers/bdo.png' },
+  { name: 'Boston Consulting Group', logo: '/logos/employers/bcg.png' },
+  { name: 'TD Bank', logo: '/logos/employers/td.png' },
+  { name: 'BMO', logo: '/logos/employers/bmo.png' },
+  { name: 'Bell Canada', logo: '/logos/employers/bell.png' },
+]
+
+const partnerLogos = [
   'Accelerate Okanagan',
   'Spring',
   'M51 Accelerator',
@@ -71,15 +94,22 @@ export default function Home() {
       />
       <JoinNetwork />
       <LogoCarousel
-        id="supporters"
-        eyebrow="Our Partners"
-        heading="Supported By"
+        id="employers"
+        heading="Canada's top employers use Gigsup to find their next generation of talent"
         logos={employerLogos}
         direction="right"
         speed="normal"
       />
       <WhoItsFor />
       <Pricing />
+      <LogoCarousel
+        id="supporters"
+        eyebrow="Our Partners"
+        heading="Supported By"
+        logos={partnerLogos}
+        direction="right"
+        speed="normal"
+      />
       <CTA />
       <Footer />
     </>

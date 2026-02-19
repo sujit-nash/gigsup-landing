@@ -8,6 +8,7 @@ interface LogoCarouselProps {
   id?: string
   eyebrow?: string
   heading: string
+  subtitle?: string
   logos: LogoItem[]
   direction?: 'left' | 'right'
   speed?: 'slow' | 'normal' | 'fast'
@@ -49,11 +50,20 @@ export default function LogoCarousel({
   id,
   eyebrow,
   heading,
+  subtitle,
   logos,
   direction = 'left',
   speed = 'normal',
   rows = 1,
 }: LogoCarouselProps) {
+  const headerBlock = (
+    <div className="container">
+      {eyebrow && <div className="carousel-eyebrow sr">{eyebrow}</div>}
+      <h2 className="carousel-heading sr">{heading}</h2>
+      {subtitle && <p className="carousel-subtitle sr">{subtitle}</p>}
+    </div>
+  )
+
   if (rows > 1) {
     const perRow = Math.ceil(logos.length / rows)
     const rowData: LogoItem[][] = []
@@ -64,10 +74,7 @@ export default function LogoCarousel({
 
     return (
       <section className="carousel-section" id={id}>
-        <div className="container">
-          {eyebrow && <div className="carousel-eyebrow sr">{eyebrow}</div>}
-          <h2 className="carousel-heading sr">{heading}</h2>
-        </div>
+        {headerBlock}
         <div className="carousel-rows">
           {rowData.map((row, r) => {
             const dir = r % 2 === 0 ? direction : (direction === 'left' ? 'right' : 'left')
@@ -90,10 +97,7 @@ export default function LogoCarousel({
 
   return (
     <section className="carousel-section" id={id}>
-      <div className="container">
-        {eyebrow && <div className="carousel-eyebrow sr">{eyebrow}</div>}
-        <h2 className="carousel-heading sr">{heading}</h2>
-      </div>
+      {headerBlock}
       <div className="carousel-track-wrapper sr">
         <div className={`carousel-track carousel-track--${direction} carousel-track--${speed}`}>
           {track.map((logo, i) => (

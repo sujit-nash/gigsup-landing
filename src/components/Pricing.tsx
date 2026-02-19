@@ -27,8 +27,10 @@ export default function Pricing() {
   return (
     <section className="pricing-section" id="pricing">
       <div className="container">
-        <div className="section-eyebrow sr">Pricing</div>
-        <h2 className="section-heading sr">Choose your <span className="muted">career plan</span></h2>
+        <div style={{ textAlign: 'center' }}>
+          <div className="section-eyebrow sr">Pricing</div>
+          <h2 className="section-heading sr">Choose your <span style={{ color: '#000000' }}>career plan</span></h2>
+        </div>
         <p className="pricing-sub sr">Start free. Upgrade when you&apos;re ready to go deeper.</p>
 
         <div className="pricing-toggle sr">
