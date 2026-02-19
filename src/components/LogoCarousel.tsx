@@ -11,7 +11,7 @@ interface LogoCarouselProps {
   logos: LogoItem[]
   direction?: 'left' | 'right'
   speed?: 'slow' | 'normal' | 'fast'
-  rows?: 1 | 2
+  rows?: 1 | 2 | 3
 }
 
 function LogoPill({ logo }: { logo: LogoItem }) {
@@ -54,11 +54,13 @@ export default function LogoCarousel({
   speed = 'normal',
   rows = 1,
 }: LogoCarouselProps) {
-  if (rows === 2) {
-    const mid = Math.ceil(logos.length / 2)
-    const row1 = [...logos.slice(0, mid), ...logos.slice(0, mid)]
-    const row2 = [...logos.slice(mid), ...logos.slice(mid)]
-    const dir2 = direction === 'left' ? 'right' : 'left'
+  if (rows > 1) {
+    const perRow = Math.ceil(logos.length / rows)
+    const rowData: LogoItem[][] = []
+    for (let r = 0; r < rows; r++) {
+      const slice = logos.slice(r * perRow, (r + 1) * perRow)
+      rowData.push([...slice, ...slice])
+    }
 
     return (
       <section className="carousel-section" id={id}>
@@ -67,20 +69,18 @@ export default function LogoCarousel({
           <h2 className="carousel-heading sr">{heading}</h2>
         </div>
         <div className="carousel-rows">
-          <div className="carousel-track-wrapper sr">
-            <div className={`carousel-track carousel-track--${direction} carousel-track--${speed}`}>
-              {row1.map((logo, i) => (
-                <LogoPill logo={logo} key={`r1-${i}`} />
-              ))}
-            </div>
-          </div>
-          <div className="carousel-track-wrapper sr">
-            <div className={`carousel-track carousel-track--${dir2} carousel-track--${speed}`}>
-              {row2.map((logo, i) => (
-                <LogoPill logo={logo} key={`r2-${i}`} />
-              ))}
-            </div>
-          </div>
+          {rowData.map((row, r) => {
+            const dir = r % 2 === 0 ? direction : (direction === 'left' ? 'right' : 'left')
+            return (
+              <div className="carousel-track-wrapper sr" key={r}>
+                <div className={`carousel-track carousel-track--${dir} carousel-track--${speed}`}>
+                  {row.map((logo, i) => (
+                    <LogoPill logo={logo} key={`r${r}-${i}`} />
+                  ))}
+                </div>
+              </div>
+            )
+          })}
         </div>
       </section>
     )
