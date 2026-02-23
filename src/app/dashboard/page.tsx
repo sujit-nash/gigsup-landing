@@ -74,15 +74,9 @@ export default function Dashboard() {
               <h1 className="db-topbar-title">
                 Welcome back, <span className="db-accent">Jordan</span>
               </h1>
-              <p className="db-topbar-sub">Discover every career your degree opens up</p>
+              <p className="db-topbar-sub">Plan your path to the right career</p>
             </div>
             <div className="db-topbar-right">
-              <div className="db-region">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <select value={selectedRegion} onChange={(e) => setSelectedRegion(e.target.value)} className="db-region-select">
-                  {regions.map(r => <option key={r} value={r}>{r}</option>)}
-                </select>
-              </div>
               <div className="db-topbar-stats">
                 <div className="db-mini-stat">
                   <span className="db-mini-num" data-counter="5">0</span>
@@ -105,6 +99,9 @@ export default function Dashboard() {
             {/* ── DISCOVER ── */}
             <section className="db-col-card">
               <div className="db-col-header">
+                <span className="db-col-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+                </span>
                 <h2 className="db-col-title">DISCOVER</h2>
                 <p className="db-col-desc">Build your profile through guided steps</p>
               </div>
@@ -150,6 +147,9 @@ export default function Dashboard() {
             {/* ── MATCH ── */}
             <section className="db-col-card">
               <div className="db-col-header">
+                <span className="db-col-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </span>
                 <h2 className="db-col-title">MATCH</h2>
                 <p className="db-col-desc">Reveal jobs that truly align with your degree</p>
               </div>
@@ -190,6 +190,9 @@ export default function Dashboard() {
             {/* ── ACHIEVE ── */}
             <section className="db-col-card">
               <div className="db-col-header">
+                <span className="db-col-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 7 7 7 7"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5C17 4 17 7 17 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                </span>
                 <h2 className="db-col-title">ACHIEVE</h2>
                 <p className="db-col-desc">3 ways to land your first role</p>
               </div>

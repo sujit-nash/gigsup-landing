@@ -60,15 +60,30 @@ export default function DashboardSidebar({ region }: DashboardSidebarProps) {
 
   return (
     <aside className="db-sidebar">
-      {/* Profile */}
+      {/* Profile Card */}
       <div className="db-side-profile">
         <div className="db-avatar">
           <span>JD</span>
           <div className="db-avatar-dot" />
         </div>
         <div className="db-profile-info">
-          <p className="db-profile-welcome">Welcome</p>
-          <h3>Jordan</h3>
+          <h3>Jordan Davis</h3>
+          <p className="db-profile-role">High School Explorer</p>
+          <div className="db-profile-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {region}
+          </div>
+        </div>
+
+        {/* Career Clarity inline */}
+        <div className="db-profile-clarity">
+          <div className="db-profile-clarity-top">
+            <span className="db-profile-clarity-label">Career Clarity</span>
+            <span className="db-profile-clarity-val">42%</span>
+          </div>
+          <div className="db-profile-clarity-track">
+            <div className="db-profile-clarity-fill" ref={barRef} style={{ width: 0 }} />
+          </div>
         </div>
       </div>
 
@@ -100,20 +115,6 @@ export default function DashboardSidebar({ region }: DashboardSidebarProps) {
         </a>
       </div>
 
-      {/* Career Clarity */}
-      <div className="db-side-clarity">
-        <div className="db-clarity-header">
-          <span className="db-clarity-label">Career Clarity</span>
-          <span className="db-clarity-value">42<small>%</small></span>
-        </div>
-        <div className="db-clarity-track">
-          <div className="db-clarity-fill" ref={barRef} style={{ width: 0 }} />
-        </div>
-        <div className="db-clarity-range">
-          <span>Exploring</span>
-          <span>Clear</span>
-        </div>
-      </div>
     </aside>
   )
 }
