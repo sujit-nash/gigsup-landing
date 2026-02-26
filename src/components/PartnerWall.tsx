@@ -10,13 +10,11 @@ interface Partner {
 const partners: Partner[] = [
   { name: 'Accelerate Okanagan', logo: '/logos/partners/accelerate.png' },
   { name: 'Spring', logo: '/logos/partners/spring.png' },
-  { name: 'M51 Accelerator', logo: '/logos/partners/m51.webp' },
+  { name: 'Movement 51', logo: '/logos/partners/m51.webp' },
   { name: 'NVIDIA Inception', logo: '/logos/partners/nvidia.png' },
   { name: 'Virtual Trade Accelerator', logo: '/logos/partners/vta.png' },
   { name: 'NRC IRAP', logo: '/logos/partners/nrcirap.png' },
   { name: 'Mitacs', logo: '/logos/partners/mitacs.png' },
-  { name: 'BCIT', logo: '/logos/partners/bcit.png' },
-  { name: 'UCW', logo: '/logos/partners/ucw.png' },
 ]
 
 function PartnerLogo({ partner }: { partner: Partner }) {
@@ -24,16 +22,18 @@ function PartnerLogo({ partner }: { partner: Partner }) {
 
   return (
     <div className="partner-item sr">
-      {!imgError ? (
-        <img
-          src={partner.logo}
-          alt={partner.name}
-          className="partner-logo"
-          onError={() => setImgError(true)}
-        />
-      ) : (
-        <span className="partner-fallback">{partner.name.charAt(0)}</span>
-      )}
+      <div className="partner-logo-circle">
+        {!imgError ? (
+          <img
+            src={partner.logo}
+            alt={partner.name}
+            className="partner-logo"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <span className="partner-fallback">{partner.name.charAt(0)}</span>
+        )}
+      </div>
       <span className="partner-name">{partner.name}</span>
     </div>
   )
